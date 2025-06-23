@@ -12,10 +12,13 @@ export const useApi = () => {
       },
     };
 
-    const response = await fetch(`http://localhost:8000/api/${endpoint}`, {
-      ...defaultOptions,
-      ...options,
-    });
+    const response = await fetch(
+      `https://fastapi-react-app-mvnl.onrender.com/api/${endpoint}`,
+      {
+        ...defaultOptions,
+        ...options,
+      }
+    );
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => null);

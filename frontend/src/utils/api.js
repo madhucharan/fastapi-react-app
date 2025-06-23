@@ -1,5 +1,8 @@
 import { useAuth } from "@clerk/clerk-react";
 
+//env variable load 
+import.meta.env.BACKEND_API;
+
 export const useApi = () => {
   const { getToken } = useAuth();
 
